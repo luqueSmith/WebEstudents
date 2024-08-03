@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Juego del Dinosaurio</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            background-color: #f4f4f4;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .game-container {
+            width: 800px;
+            height: 300px;
+            background-color: #9ee6e2;
+            position: relative;
+            border: 2px solid #ccc;
+            
+        }
+        .dino {
+            width: 40px;
+            height: 40px;
+            background-color: #00c8ff;
+            position: absolute;
+            bottom: 20px;
+            left: 20px;
+            border: black solid;
+        }
+        .cactus {
+            width: 20px;
+            height: 40px;
+            background-color: #1b0000;
+            position: absolute;
+            bottom: 20px;
+        }
+        .jump {
+            animation: jump 0.5s;
+        }
+        @keyframes jump {
+            0% { bottom: 20px; }
+            50% { bottom: 100px; }
+            100% { bottom: 20px; }
+        }
+        .text_01{
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        }
+    </style>
+</head>
+<body>
+    <div class="game-container">
+        <h1 class="text_01" style="text-align: center;">NO HAY TAREA XQ NO LA TERMINE, MEJOR JUEGA HASTA Q LA TERMINE XD <a style="font-size: 20px;" href="index.html">Regresar</a></h1>
+        <br>
+        <div class="dino" id="dino"></div>
+        <div class="cactus" id="cactus1"></div>
+        <div class="cactus" id="cactus2"></div>
+        
+    </div>
+    <script>
+        const dino = document.getElementById('dino');
+        const cactus1 = document.getElementById('cactus1');
+        const cactus2 = document.getElementById('cactus2');
+        
+        let isJumping = false;
+
+        function jump() {
+            if (isJumping) return;
+            isJumping = true;
+            dino.classList.add('jump');
+            setTimeout(() => {
+                dino.classList.remove('jump');
+                isJumping = false;
+            }, 500);
+        }
+
+        document.addEventListener('keydown', event => {
+            if (event.code === 'Space') {
+                jump();
+            }
+        });
+
+        function moveCactus() {
+            const cactusSpeed = 5;
+            let cactus1Position = 800;
+            let cactus2Position = 1200;
+
+            function update() {
+                cactus1Position -= cactusSpeed;
+                cactus2Position -= cactusSpeed;
+
+                if (cactus1Position < -20) cactus1Position = 800;
+                if (cactus2Position < -20) cactus2Position = 800;
+
+                cactus1.style.left = `${cactus1Position}px`;
+                cactus2.style.left = `${cactus2Position}px`;
+
+                if (checkCollision()) {
+                    alert('JAJAJA POR MANCO XD');
+                    cactus1Position = 800;
+                    cactus2Position = 1200;
+                }
+
+                requestAnimationFrame(update);
+            }
+
+            update();
+        }
+
+        function checkCollision() {
+            const dinoRect = dino.getBoundingClientRect();
+            const cactus1Rect = cactus1.getBoundingClientRect();
+            const cactus2Rect = cactus2.getBoundingClientRect();
+
+            if (dinoRect.left < cactus1Rect.right &&
+                dinoRect.right > cactus1Rect.left &&
+                dinoRect.bottom > cactus1Rect.top &&
+                dinoRect.top < cactus1Rect.bottom) {
+                return true;
+            }
+
+            if (dinoRect.left < cactus2Rect.right &&
+                dinoRect.right > cactus2Rect.left &&
+                dinoRect.bottom > cactus2Rect.top &&
+                dinoRect.top < cactus2Rect.bottom) {
+                return true;
+            }
+
+            return false;
+        }
+
+        moveCactus();
+    </script>
+    
+</body>
+</html>
