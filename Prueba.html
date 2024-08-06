@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Preguntas y Respuestas</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        .question {
+            margin-bottom: 20px;
+        }
+        .question h3 {
+            margin-bottom: 10px;
+        }
+        .answers {
+            list-style-type: none;
+            padding: 0;
+        }
+        .answers li {
+            margin: 5px 0;
+            padding: 10px;
+            background-color: #f9f9f9;
+            border: 1px solid #dbdbdb;
+            border-radius: 4px;
+            display: flex;
+            align-items: center;
+        }
+        .answers li.correct {
+            background-color: #60e5fd;
+            border-color: #c3d3e6;
+            font-weight: bold;
+        }
+        .answers li::before {
+            content: '';
+            display: inline-block;
+            width: 24px;
+            height: 24px;
+            margin-right: 10px;
+            background-size: contain;
+            background-repeat: no-repeat;
+        }
+        .answers li.a::before {
+            background-image: url('https://uxwing.com/wp-content/themes/uxwing/download/education-school/a-alphabet-round-icon.png'); /* Cambia esto al URL del ícono A */
+        }
+        .answers li.b::before {
+            background-image: url('https://uxwing.com/wp-content/themes/uxwing/download/education-school/b-alphabet-round-icon.png'); /* Cambia esto al URL del ícono B */
+        }
+        .answers li.c::before {
+            background-image: url('https://uxwing.com/wp-content/themes/uxwing/download/education-school/c-alphabet-round-icon.png'); /* Cambia esto al URL del ícono C */
+        }
+        .answers li.d::before {
+            background-image: url('https://uxwing.com/wp-content/themes/uxwing/download/education-school/d-alphabet-round-icon.png'); /* Cambia esto al URL del ícono D */
+        }
+        .answers li.e::before {
+            background-image: url('https://uxwing.com/wp-content/themes/uxwing/download/education-school/e-alphabet-round-icon.png'); /* Cambia esto al URL del ícono E */
+        }
+        p{
+            margin-bottom: 4%;
+            border: solid 2px rgb(231, 231, 231);
+            padding: 1%;
+        }
+    </style>
+</head>
+<body>
+    <div class="question">
+        <h3>Pregunta 01: Un servidor Web es un ejemplo de:</h3>
+        <ul class="answers">
+            <li class="a correct">Cliente Servidor</li>
+            <li class="b">Gestión principal</li>
+            <li class="c">Maestro esclavo</li>
+            <li class="d">Base de datos</li>
+            <li class="e">Controlador DC</li>
+        </ul>
+        <p><strong>Respuesta:</strong> Cliente servidor. El modelo cliente-servidor es una arquitectura de red en la que un servidor proporciona recursos o servicios a uno o más clientes.</p>
+    </div>
+    <div class="question">
+        <h3>Pregunta 02: Protocolo que permite la comunicación entre el Servidor de Archivos y los clientes:</h3>
+        <ul class="answers">
+            <li class="a">DNS</li>
+            <li class="b">SSH</li>
+            <li class="c">SSL</li>
+            <li class="d correct">SMB</li>
+            <li class="e">STP</li>
+        </ul>
+        <p><strong>Respuesta:</strong> SMB. SMB es un protocolo de red que permite compartir archivos, impresoras y otros recursos entre nodos de una red, principalmente en redes Windows.</p>
+    </div>
+    <div class="question">
+        <h3>Pregunta 03: ¿Cómo se llama al intermediario entre la computadora y la impresora?</h3>
+        <ul class="answers">
+            <li class="a correct">Servidor de impresión</li>
+            <li class="b">Impresora compartida</li>
+            <li class="c">Cola para impresión</li>
+            <li class="d">Switch de networking</li>
+            <li class="e">Cableado estructurado</li>
+        </ul>
+        <p><strong>Respuesta:</strong> Servidor de impresión. Un servidor de impresión gestiona las tareas de impresión de varias computadoras y las envía a una o más impresoras conectadas a la red.</p>
+    </div>
+    <div class="question">
+        <h3>Pregunta 04: Gestiona la autenticación y acceso a red para los usuarios de la organización:</h3>
+        <ul class="answers">
+            <li class="a correct">Domain controller</li>
+            <li class="b">Name services</li>
+            <li class="c">Security server</li>
+            <li class="d">LDAP controller</li>
+            <li class="e">Policy services</li>
+        </ul>
+        <p><strong>Respuesta:</strong> Domain controller (controlador de dominio). Un controlador de dominio es un servidor en una red que responde a las solicitudes de autenticación y verifica los usuarios y contraseñas, gestionando el acceso a los recursos de la red en un dominio de Windows.</p>
+    </div>
+    <div class="question">
+        <h3>Pregunta 05: Brinda archivos a disposición de un cliente conectado a la red:</h3>
+        <ul class="answers">
+            <li class="a correct">File server</li>
+            <li class="b">SSH server</li>
+            <li class="c">DC Windows</li>
+            <li class="d">DC service</li>
+            <li class="e">Data base</li>
+        </ul>
+        <p><strong>Respuesta:</strong> File server (servidor de archivos). Un servidor de archivos almacena y gestiona los archivos de datos para que los usuarios de una red puedan acceder a ellos, compartirlos y gestionarlos de manera centralizada.</p>
+    </div>
+</body>
+</html>

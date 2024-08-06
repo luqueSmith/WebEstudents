@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galería de Juegos</title>
+    <link rel="icon" href="SubWeb/img/icon_juego.png" type="image/x-icon">
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Press Start 2P', cursive;
+            background: #212121;
+            color: #fff;
+            text-align: center;
+            overflow-x: hidden;
+        }
+        .header {
+            background: #2d2d2d;
+            padding: 20px;
+            border-bottom: 3px solid #ffffff;
+        }
+        .header h1 {
+            margin: 0;
+            font-size: 36px;
+            color: #ffffff;
+        }
+        .games-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+            padding: 20px;
+        }
+        .game {
+            background: #333;
+            border: 2px solid #fdfdfd;
+            border-radius: 10px;
+            width: 250px;
+            padding: 20px;
+            position: relative;
+            overflow: hidden;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        .game:hover {
+            transform: scale(1.05);
+            box-shadow: 0 0 15px rgba(255, 255, 255, 0.8);
+        }
+        .game h2 {
+            margin: 0;
+            font-size: 24px;
+            color: #fff;
+        }
+        .game a {
+            display: block;
+            margin-top: 10px;
+            padding: 10px;
+            background: #ffffff;
+            color: #000000;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background 0.3s;
+        }
+        .game a:hover {
+            background: #38caff;
+        }
+        .game img {
+            width: 100%;
+            height: auto;
+            border-radius: 5px;
+            margin-bottom: 10px;
+        }
+        .footer {
+            background: #222;
+            padding: 20px;
+            border-top: 3px solid #ffffff;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            color: #fff;
+        }
+        .footer p {
+            margin: 0;
+        }
+        .img-01{
+            width: 70px;
+        }
+        .floating-button {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            width: 60px;
+            height: 60px;
+            background-color: #082747;
+            border-radius: 50%;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+            z-index: 1000;
+        }
+        
+        .floating-button img {
+            width: 70%;
+            height: 70%;
+        }
+        
+        .floating-button:hover {
+            background-color: #0056b3;
+            transform: scale(1.1);
+        }
+        
+        .floating-button:active {
+            background-color: #004085;
+            transform: scale(0.95);
+        }
+    </style>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap">
+</head>
+<body>
+    <a href="index.html" class="floating-button">
+        <img src="SubWeb/img/regresar.png" alt="Regresar">
+    </a>
+    <div class="header">
+        <h1> <img class="img-01" src="SubWeb/img/videojuegos.png" alt=""> Galería de Juegos</h1>
+    </div>
+    <div class="games-container">
+        <div class="game">
+            <img src="img/image1.png" alt="Juego 1">
+            <h2>Flappy</h2>
+            <a href="Mini-Juegos/Flappy Dino/juego.html">JUGAR</a>
+        </div>
+        <div class="game">
+            <img src="img/image2.png" alt="Juego 2">
+            <h2>Pacman</h2>
+            <a href="Mini-Juegos/Pacman HTML/juego.html">JUGAR</a>
+        </div>
+        <div class="game">
+            <img src="img/image3.png" alt="Juego 3">
+            <h2>PinPong</h2>
+            <a href="Mini-Juegos/PinPong/juego.html">JUGAR</a>
+        </div>
+        <div class="game">
+            <img src="img/image4.png" alt="Juego 4">
+            <h2>Tetris</h2>
+            <a href="Mini-Juegos/Tetris/juego.html">JUGAR</a>
+        </div>
+    </div>
+    <div class="games-container">
+        <div class="game">
+            <img src="img/image5.png" alt="Juego 1">
+            <h2>Hero Wars</h2>
+            <a href="https://www.hero-wars.com/?hl=en&delayedsignup=true&nx_source=adx_adwordssearch.hw_wb_ut_-.cc-ww_other.g-all.au-generic.opt-purchase2.com-newac.lp-delayed.dt-search.kw-online%20games.mT-p.cid-21126975982.agId-160711880832.csd-190424.-&gad_source=1&gclid=CjwKCAjwqre1BhAqEiwA7g9QhldPg5916ZabXKuY8Lf_oFCp5J2i74xkJys01VsJ-23a6TCgTikcJRoCHNkQAvD_BwE">JUGAR</a>
+        </div>
+        <div class="game">
+            <img src="img/sin-curso.png" alt="Juego 2">
+            <h2>NADA</h2>
+            <a href="Error.html">JUGAR</a>
+        </div>
+        <div class="game">
+            <img src="img/sin-curso.png" alt="Juego 3">
+            <h2>NADA</h2>
+            <a href="Error.html">JUGAR</a>
+        </div>
+        <div class="game">
+            <img src="img/sin-curso.png" alt="Juego 4">
+            <h2>NADA</h2>
+            <a href="Error.html">JUGAR</a>
+        </div>
+    </div>
+    <div class="footer">
+        <p>&copy; Pasate algunos Videojuegos para ponerlos aca XD.</p>
+    </div>
+</body>
+</html>

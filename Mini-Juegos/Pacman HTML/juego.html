@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>Pacman</title>
+  <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Permanent+Marker'><link rel="stylesheet" href="./style.css">
+  <link rel="icon" href="../../SubWeb/img/videojuegos.png" type="image/x-icon">
+
+  <style>
+    .floating-button {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      width: 60px;
+      height: 60px;
+      background-color: #082747;
+      border-radius: 50%;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      cursor: pointer;
+      transition: background-color 0.3s ease, transform 0.3s ease;
+      z-index: 1000;
+  }
+  
+  .floating-button img {
+      width: 70%;
+      height: 70%;
+  }
+  
+  .floating-button:hover {
+      background-color: #0056b3;
+      transform: scale(1.1);
+  }
+  
+  .floating-button:active {
+      background-color: #004085;
+      transform: scale(0.95);
+  }
+  </style>
+  <body>
+    <a href="../../Juego.html" class="floating-button">
+      <img src="../../SubWeb/img/regresar.png" alt="Regresar">
+  </a>
+<div id="shim">shim for font face</div>
+
+<h1>HTML5 Pacman</h1>
+
+<p><a href="https://github.com/daleharvey/pacman" target="_blank">Credits: https://github.com/daleharvey/pacman</a></p>
+
+<div id="pacman"></div>
+<!-- partial -->
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script><script  src="./script.js"></script>
+
+</body>
+</html>
